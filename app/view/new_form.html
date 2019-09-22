@@ -1,0 +1,38 @@
+<section class="home" ng-if="newformCtrl.view == 'Home'">
+    <div ng-include="'view/home.html'">
+    </div>
+</section>
+
+<section class="home" ng-if="newformCtrl.view == 'Done'">
+    <div ng-include="'view/apos-form.html'">
+    </div>
+</section>
+
+
+<section ng-if="newformCtrl.view == 'Form'" layout="column" layout-align="center stretch">
+
+  <section>
+    <sad-question-card-header nome-questionario="newformCtrl.nomeQuestionario"
+        nome-disciplina="newformCtrl.disciplina.nome"
+        semestre="newformCtrl.disciplina.semestre"
+        turma="newformCtrl.disciplina.turma">
+    </sad-question-card-header>
+  </section>
+
+    <!-- Question card -->
+    <div class='wrapper'>
+      <div ng-repeat="questao in newformCtrl.questionario" style="position:relative">
+        <sad-question-card enunciado="questao.enunciado" tipo="questao.tipoQuestao"
+          numero="$index + 1" radio="newformCtrl.questaoRadio" comentario="newformCtrl.comentarios">
+        </sad-question-card>
+      </div>
+    </div>
+
+    <sad-question-card-footer numero-de-questoes="newformCtrl.numeroDeQuestoes"
+        numero-de-questoes-respondidas="newformCtrl.numeroDeQuestoesRespondidas()"
+        porcentagem="newformCtrl.calcPorcentagem()"
+        questao-radio="newformCtrl.questaoRadio"
+        questionario="newformCtrl.questionario"
+        enviar-resposta="newformCtrl.dialogResposta()"
+        resposta-rapida="newformCtrl.dialogRespostaRapida()"></sad-question-card-footer>
+</section>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de Avaliação Docente">
+    <meta name="keywords" content="SAD, UFCG, SAD UFCG, Sistema de Avaliação Docente, Avaliação, Computação, CC" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SAD - UFCG</title>
+    <meta name="description" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="../node_modules/angular-material/angular-material.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="../node_modules/material-icons/css/material-icons.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/lf-ng-md-file-input/lf-ng-md-file-input.min.css">
+
+    <!-- CSS -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/app/css/form-card.css">
+    <link rel="stylesheet" href="/app/css/home.css">
+    <link rel="stylesheet" href="/app/css/main.css">
+    <link rel="stylesheet" href="/app/css/main-admin.css">
+    <link rel="stylesheet" href="/app/css/questionario.css">
+
+    <!-- endinject -->
+</head>
+
+<body ng-app="sadApp" ng-cloak>
+
+    <section>
+        <div ui-view="main">
+        </div>
+    </section>
+
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="../node_modules/angular-aria/angular-aria.min.js"></script>
+    <script src="../node_modules/angular-material/angular-material.min.js"></script>
+    <script src="../node_modules/angular-messages/angular-messages.min.js"></script>
+    <script src="../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="../node_modules/angular-material-icons/angular-material-icons.min.js"></script>
+    <script src="../node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./assets/lf-ng-md-file-input/lf-ng-md-file-input.min.js"></script>
+    <script src="../node_modules/d3/d3.js"></script>
+    <script src="../node_modules/nvd3/build/nv.d3.js"></script>
+    <script src="../node_modules/angular-nvd3/dist/angular-nvd3.js"></script>
+    <link rel="stylesheet" href="../node_modules/nvd3/build/nv.d3.css">
+
+    <!-- config -->
+    <script src="./js/config.js"></script>
+    <script src="./js/value/configValue.js"></script>
+
+    <!-- controllers:js -->
+    <script src="/app/js/controller/form.ctrl.js"></script>
+    <script src="/app/js/controller/new_form.ctrl.js"></script>
+    <script src="/app/js/controller/home.ctrl.js"></script>
+    <script src="/app/js/controller/main.ctrl.js"></script>
+    <script src="/app/js/controller/admin.ctrl.js"></script>
+    <script src="/app/js/controller/cadastraTurmas.ctrl.js"></script>
+    <script src="/app/js/controller/criarQuestionario.ctrl.js"></script>
+    <script src="/app/js/controller/aplicarQuestionario.ctrl.js"></script>
+    <script src="/app/js/controller/criarDisciplina.ctrl.js"></script>
+    <script src="/app/js/controller/disciplina.ctrl.js"></script>
+    <script src="/app/js/controller/disciplinas.ctrl.js"></script>
+    <script src="/app/js/controller/questionarioDetalhe.ctrl.js"></script>
+    <script src="/app/js/controller/dialogRespostaRapida.ctrl.js"></script>
+    <script src="/app/js/controller/preVisualizarResposta.ctrl.js"></script>
+    <script src="/app/js/controller/visualizarResposta.ctrl.js"></script>
+    <script src="/app/js/controller/questionariosAplicados.ctrl.js"></script>
+    <script src="/app/js/controller/login.ctrl.js"></script>
+
+    <!-- endinject -->
+
+    <!-- services:js -->
+    <script src="/app/js/services/answer.srv.js"></script>
+    <script src="/app/js/services/uploadCsv.srv.js"></script>
+    <script src="/app/js/services/toast.srv.js"></script>
+    <script src="/app/js/services/dialog.srv.js"></script>
+    <script src="/app/js/services/questionario.srv.js"></script>
+    <script src="/app/js/services/formulario.srv.js"></script>
+    <script src="/app/js/services/questionarioAplicado.srv.js"></script>
+    <script src="/app/js/services/resposta.srv.js"></script>
+    <script src="/app/js/services/token.srv.js"></script>
+    <script src="/app/js/services/email.srv.js"></script>
+    <script src="/app/js/services/auth.srv.js"></script>
+    <script src="/app/js/services/authInterceptor.srv.js"></script>
+
+    <script src="/app/js/services/disciplina.srv.js"></script>
+    <script src="/app/js/factory/Disciplina.js"></script>
+    <script src="/app/js/services/disciplinas.srv.js"></script>
+    <script src="/app/js/services/questionarios.srv.js"></script>
+    <script src="/app/js/services/aplicarQuestionario.srv.js"></script>
+    <script src="/app/js/factory/QuestionarioAplicado.js"></script>
+
+    <!-- endinject -->
+
+    <!-- components:js -->
+    <script src="/app/js/component/sad-question-card/sad-question-card.component.js"></script>
+    <script src="/app/js/component/sad-question-card-footer/sad-question-card-footer.component.js"></script>
+    <script src="/app/js/component/sad-question-card-header/sad-question-card-header.component.js"></script>
+
+    <!-- endinject -->
+
+</body>
+
+</html>
